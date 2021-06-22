@@ -16,3 +16,21 @@ Run a series of tests on authorship lists. Create a repository and scan it with 
  get_stats_contributors
  get_collaborators
  write a short document explaining the test setup and results from each API call.
+
+# Squash commits
+
+A squash-commit is a particular kind of commit that re-writes the
+git history.  For example, say a repository goes through edit steps:
+A -> B -> C -> D
+and later the author of D wanted to combine several commits
+into one commit.  Then, they could re-write their git history to
+A -> B -> D'
+
+The new commit, D', is a squash-commit, since it contains all
+the changes from both C and D.
+
+If the user pushes the (A -> B -> D') repository, knowledge that
+C was a separate commit will have been lost.
+Here, I'm creating commit C as Boyana Norris.
+Then, I'll squash that and show (as I suspect)
+that the authorship record is gone.
